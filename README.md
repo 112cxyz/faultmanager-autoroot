@@ -53,7 +53,7 @@ know whether webOS 4.5 will be.
 ## Example
 
 ```sh
-curl -L -o /tmp/autoroot.sh -- 'https://raw.githubusercontent.com/throwaway96/faultmanager-autoroot/refs/heads/main/autoroot.sh' &&
+curl -L -o /tmp/autoroot.sh -- 'https://raw.githubusercontent.com/112cxyz/faultmanager-autoroot/refs/heads/main/autoroot.sh' &&
 sh /tmp/autoroot.sh
 ```
 
