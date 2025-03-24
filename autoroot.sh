@@ -555,6 +555,7 @@ chmod '0755' -- "${payload_script}"
 echo "about to payload"
 # Create a link to python so that when it crashes, it will have the comm we want
 crash="${tempdir}/\`${payload_uninterp}\`"
+echo "running ln"
 ln -s -- "$(find_python)" "${crash}"
 
 killed_tail=''
