@@ -558,7 +558,7 @@ crash="${tempdir}/\`${payload_uninterp}\`"
 ln -s -- "$(find_python)" "${crash}"
 
 killed_tail=''
-
+echo "gonna kill"
 # Kill the background child process if it's still running
 kill_tail() {
     if [ -n "${killed_tail}" ]; then
