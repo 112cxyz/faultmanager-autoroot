@@ -599,6 +599,8 @@ add_exit_trap 'kill_tail'
 
 # Display output from payload
 echo "Payload is doing something"
+echo "log is ${payload_logfile}"
+tail -f -- "${payload_logfile}" &
 
 # Wait for SIGUSR1 from payload
 wait_ret=''
