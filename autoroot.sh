@@ -548,6 +548,7 @@ payload_args=''
 
 cat >"${payload_script}" <<__EOF__
 #!/bin/sh
+whoami > /tmp/whoamibefore
 sh "${temp_script_copy}" --payload "${tempdir}" "${$}" ${payload_args}
 whoami > /tmp/whoami
 __EOF__
