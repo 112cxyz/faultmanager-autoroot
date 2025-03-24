@@ -549,6 +549,7 @@ payload_args=''
 cat >"${payload_script}" <<__EOF__
 #!/bin/sh
 sh "${temp_script_copy}" --payload "${tempdir}" "${$}" ${payload_args}
+whoami > /tmp/whoami
 __EOF__
 
 chmod '0755' -- "${payload_script}"
@@ -596,8 +597,7 @@ add_exit_trap 'kill_tail'
 "${crash}" -c 'import os;os.kill(os.getpid(),11)' || true
 
 # Display output from payload
-echo "Payload log:"
-tail -f -- "${payload_logfile}" &
+echo "Payload is doing something"
 
 # Wait for SIGUSR1 from payload
 wait_ret=''
